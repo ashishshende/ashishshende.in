@@ -8,15 +8,14 @@ import { Footer } from "@/components/portfolio/footer";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="min-h-screen">
       <Header />
       <section id="home">
         <HeroSection />
       </section>
+      <ProjectsSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
-      <hr/>
       <ContactSection />
       <Footer />
     </main>

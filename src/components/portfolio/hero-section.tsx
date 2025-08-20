@@ -46,58 +46,58 @@ export function HeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid xl:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-8 animate-fade-in-up xl:col-span-1 col-span-full">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Ashish Shende</span>
               </h1>
-              <div className="text-2xl lg:text-3xl text-white h-12 flex items-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl text-white h-8 sm:h-10 lg:h-12 flex items-center">
                 <span>
                   {displayText}
                 </span>
                 <span className="animate-blink ml-1">|</span>
               </div>
-              <p className="text-lg text-gray-200 max-w-2xl">
+              <p className="text-base sm:text-lg text-gray-200 max-w-2xl">
                 Senior Full Stack Developer & AI Enthusiast with 12+ years of experience in building scalable web applications. 
                 Expert in React, Node.js, TypeScript, Python, and modern development practices including microservices and CI/CD.
               </p>
             </div>
 
             {/* Tech Stack Icons */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               <div className="flex items-center space-x-2 text-green-400">
-                <Code className="w-6 h-6" />
-                <span className="font-medium">React/Next.js</span>
+                <Code className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">React/Next.js</span>
               </div>
               <div className="flex items-center space-x-2 text-blue-400">
-                <Cpu className="w-6 h-6" />
-                <span className="font-medium">Node.js</span>
+                <Cpu className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">Node.js</span>
               </div>
               <div className="flex items-center space-x-2 text-purple-400">
-                <Database className="w-6 h-6" />
-                <span className="font-medium">TypeScript</span>
+                <Database className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">TypeScript</span>
               </div>
               <div className="flex items-center space-x-2 text-red-400">
-                <Bot className="w-6 h-6" />
-                <span className="font-medium">Python</span>
+                <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">Python</span>
               </div>
               <div className="flex items-center space-x-2 text-orange-400">
-                <GitBranch className="w-6 h-6" />
-                <span className="font-medium">Git/CI-CD</span>
+                <GitBranch className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">Git/CI-CD</span>
               </div>
               <div className="flex items-center space-x-2 text-cyan-400">
-                <Cloud className="w-6 h-6" />
-                <span className="font-medium">Docker/K8s</span>
+                <Cloud className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">Docker/K8s</span>
               </div>
               <div className="flex items-center space-x-2 text-pink-400">
-                <Brain className="w-6 h-6" />
-                <span className="font-medium">AI/ML</span>
+                <Brain className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">AI/ML</span>
               </div>
               <div className="flex items-center space-x-2 text-yellow-400">
-                <Settings className="w-6 h-6" />
-                <span className="font-medium">Microservices</span>
+                <Settings className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="font-medium text-sm sm:text-base">Microservices</span>
               </div>
             </div>
 
@@ -112,36 +112,12 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-6">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform"
-              >
-                <Github className="w-6 h-6" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-blue-400 transition-colors hover:scale-110 transform"
-              >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a
-                href="mailto:ashish@example.com"
-                className="text-gray-300 hover:text-red-400 transition-colors hover:scale-110 transform"
-              >
-                <Mail className="w-6 h-6" />
-              </a>
-            </div>
+
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="relative animate-fade-in-right">
-            <div className="relative w-80 h-80 mx-auto">
+          <div className="relative animate-fade-in-right mt-8 lg:mt-0 hidden xl:block">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-pulse opacity-20"></div>
               <div className="absolute inset-2 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full animate-spin-slow opacity-30"></div>
@@ -157,20 +133,20 @@ export function HeroSection() {
               </div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '0.3s'}}>
-                <Code className="w-8 h-8 text-white" />
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '0.3s'}}>
+                <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '1.2s'}}>
-                <Database className="w-8 h-8 text-white" />
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '1.2s'}}>
+                <Database className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <div className="absolute top-1/2 -right-8 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center animate-bounce" style={{animationDelay: '0.7s'}}>
-                <Server className="w-6 h-6 text-white" />
+              <div className="absolute top-1/2 -right-4 sm:-right-8 w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-full flex items-center justify-center animate-bounce" style={{animationDelay: '0.7s'}}>
+                <Server className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div className="absolute -top-8 left-1/2 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center animate-bounce" style={{animationDelay: '1.8s'}}>
-                <Zap className="w-7 h-7 text-white" />
+              <div className="absolute -top-4 sm:-top-8 left-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-orange-500 rounded-full flex items-center justify-center animate-bounce" style={{animationDelay: '1.8s'}}>
+                <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
-              <div className="absolute -bottom-8 right-1/4 w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '0.9s'}}>
-                <Cpu className="w-6 h-6 text-white" />
+              <div className="absolute -bottom-4 sm:-bottom-8 right-1/4 w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500 rounded-lg flex items-center justify-center animate-bounce" style={{animationDelay: '0.9s'}}>
+                <Cpu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
             </div>
           </div>

@@ -53,16 +53,16 @@ export function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-800">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
@@ -72,26 +72,26 @@ export function ProjectsSection() {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-12 h-12 ${project.bgColor} rounded-lg flex items-center justify-center`}>
-                      <IconComponent className={`w-6 h-6 ${project.color}`} />
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 ${project.bgColor} rounded-lg flex items-center justify-center`}>
+                      <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${project.color}`} />
                     </div>
                     <div>
-                      <CardTitle className="text-xl">{project.title}</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl">{project.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-600">{project.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base">{project.description}</p>
                   
                   {/* Technologies */}
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Technologies Used:</h4>
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                          className="px-2 py-1 sm:px-3 bg-gray-100 text-gray-700 rounded-full text-xs sm:text-sm"
                         >
                           {tech}
                         </span>
@@ -101,11 +101,11 @@ export function ProjectsSection() {
 
                   {/* Features */}
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Key Features:</h4>
+                    <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                       {project.features.map((feature) => (
                         <li key={feature} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></div>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -113,14 +113,14 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex space-x-3 pt-4">
-                    <Button variant="outline" size="sm" asChild>
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4">
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild>
+                    <Button size="sm" className="w-full sm:w-auto" asChild>
                       <a href={project.live} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo

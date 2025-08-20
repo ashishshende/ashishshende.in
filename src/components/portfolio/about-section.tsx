@@ -7,14 +7,14 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             I&apos;m a dedicated MERN Stack Developer with a passion for creating innovative web solutions
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left - Personal Info */}
           <div className="space-y-6">
             <div className="space-y-4">
@@ -49,7 +49,7 @@ export function AboutSection() {
           </div>
 
           {/* Right - Stats Cards */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-8 lg:mt-0">
             <Card className="text-center p-6 hover:shadow-lg transition-shadow animate-fade-in-up bg-gray-700 border-gray-600">
               <CardContent className="space-y-2">
                 <div className="text-3xl font-bold text-blue-400">50+</div>

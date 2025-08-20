@@ -75,14 +75,14 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Skills & Technologies</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Skills & Technologies</h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             Here are the technologies and tools I work with to bring ideas to life
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
@@ -91,14 +91,14 @@ export function SkillsSection() {
                 className="group perspective-1000 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                <div className="relative w-full h-72 sm:h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
                   {/* Front Side */}
                   <Card className="absolute inset-0 backface-hidden hover:shadow-lg transition-shadow bg-gray-800 border-gray-700">
                     <CardHeader className="text-center pb-4">
-                      <div className={`w-16 h-16 ${category.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                        <IconComponent className={`w-8 h-8 ${category.color}`} />
+                      <div className={`w-12 h-12 sm:w-16 sm:h-16 ${category.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                        <IconComponent className={`w-6 h-6 sm:w-8 sm:h-8 ${category.color}`} />
                       </div>
-                      <CardTitle className="text-lg text-white">{category.title}</CardTitle>
+                      <CardTitle className="text-base sm:text-lg text-white">{category.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center pb-0">
                       <p className="text-gray-400 text-sm">Click to explore skills</p>
@@ -108,14 +108,14 @@ export function SkillsSection() {
                   {/* Back Side */}
                   <Card className="absolute inset-0 backface-hidden rotate-y-180 hover:shadow-lg transition-shadow bg-gray-800 border-gray-700">
                     <CardHeader className="text-center pb-2">
-                      <CardTitle className="text-sm font-semibold text-white">{category.title}</CardTitle>
+                      <CardTitle className="text-xs sm:text-sm font-semibold text-white">{category.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex flex-wrap gap-1 max-h-60 overflow-y-auto">
+                      <div className="flex flex-wrap gap-1 max-h-52 sm:max-h-60 overflow-y-auto">
                         {category.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs hover:bg-gray-600 transition-colors"
+                            className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-gray-700 text-gray-300 rounded text-xs hover:bg-gray-600 transition-colors"
                           >
                             {skill}
                           </span>

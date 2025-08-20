@@ -76,3 +76,42 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet-specific improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* Smooth scrolling for all devices */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Touch-friendly button sizing */
+@media (max-width: 640px) {
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
