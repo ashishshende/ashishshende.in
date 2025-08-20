@@ -113,7 +113,7 @@ export default function GymEmployeesPage() {
                   <p className="text-gray-600">{employee.email}</p>
                   <p className="text-gray-600">{employee.phone}</p>
                   <p className="font-medium">{formatCurrency(employee.salary)}/month</p>
-                  <p className="text-gray-500">Joined: {formatDate(employee.joinDate || employee.createdAt)}</p>
+                  <p className="text-gray-500">Joined: {formatDate(employee.joinDate || employee.createdAt || '')}</p>
                   {employee.updatedAt && employee.updatedAt !== employee.createdAt && (
                     <p className="text-xs text-gray-400">Updated: {formatDate(employee.updatedAt)}</p>
                   )}

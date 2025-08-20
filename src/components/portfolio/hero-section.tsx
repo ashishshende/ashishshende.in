@@ -1,14 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download, Code, Database, Server, GitBranch, Settings, Cloud, Zap, Cpu, Brain, Bot, Layers } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Code, Database, Server, GitBranch, Settings, Cloud, Zap, Cpu, Brain, Bot } from 'lucide-react';
 
 export function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const roles = ['MERN Stack Developer', 'Full Stack Engineer', 'React Specialist', 'Node.js Expert', 'AI Enthusiast'];
+  const roles = useMemo(() => ['MERN Stack Developer', 'Full Stack Engineer', 'React Specialist', 'Node.js Expert', 'AI Enthusiast'], []);
 
   useEffect(() => {
     const currentWord = roles[currentRole];
@@ -51,7 +51,7 @@ export function HeroSection() {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight whitespace-nowrap">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Ashish Shende</span>
+                Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Ashish Shende</span>
               </h1>
               <div className="text-2xl lg:text-3xl text-white h-12 flex items-center">
                 <span>
@@ -148,6 +148,7 @@ export function HeroSection() {
               
               {/* Profile Image */}
               <div className="absolute inset-4 rounded-full overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/avatar.jpg" 
                   alt="Ashish Shende" 

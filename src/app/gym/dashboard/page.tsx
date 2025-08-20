@@ -37,10 +37,8 @@ export default function GymDashboardPage() {
         setStats(response.data.stats);
       } catch (error) {
         console.error("API Error Details:", {
-          message: error.message,
-          status: error.response?.status,
-          data: error.response?.data,
-          url: error.config?.url
+          message: error instanceof Error ? error.message : 'Unknown error',
+          error
         });
         
         setStats({

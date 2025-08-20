@@ -11,7 +11,7 @@ import { SubscriptionPlan } from "@/types";
 
 export default function GymSubscriptionPage() {
   const [plans, setPlans] = useState<SubscriptionPlan[]>([]);
-  const [currentPlan, setCurrentPlan] = useState<any>(null);
+  const [currentPlan, setCurrentPlan] = useState<{ plan: string; usage?: { members: number; staff: number } } | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

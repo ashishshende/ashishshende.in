@@ -30,18 +30,20 @@ export default function GymMembersPage() {
             name: "John Doe",
             email: "john@example.com",
             phone: "+1234567890",
-            membershipPlan: "Premium",
+            membershipType: "Premium",
             joinDate: "2024-01-15",
-            status: "active"
+            status: "active",
+            emergencyContact: "+1234567899"
           },
           {
             id: "2", 
             name: "Jane Smith",
             email: "jane@example.com",
             phone: "+1234567891",
-            membershipPlan: "Basic",
+            membershipType: "Basic",
             joinDate: "2024-01-10",
-            status: "active"
+            status: "active",
+            emergencyContact: "+1234567898"
           }
         ]);
       } finally {
@@ -115,7 +117,7 @@ export default function GymMembersPage() {
                   <p className="text-gray-600">{member.email} / {member.phone}</p>
                   <p className="text-gray-600">Emergency Contact: {member.emergencyContact}</p>
                   <p className="font-medium">Plan: {member.membershipType.toUpperCase()}</p>
-                  <p className="text-gray-500">Joined: {formatDateWithSettings(member.joinDate || member.createdAt)}</p>
+                  <p className="text-gray-500">Joined: {formatDateWithSettings(member.joinDate || member.createdAt || '')}</p>
                   {member.updatedAt && member.updatedAt !== member.createdAt && (
                     <p className="text-xs text-gray-400">Updated: {formatDateWithSettings(member.updatedAt)}</p>
                   )}

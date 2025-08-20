@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CreditCard, Download, Filter } from "lucide-react";
-import { Input } from "@/components/ui/input";
+
 import api from "@/lib/api";
 import { Payment } from "@/types";
 
@@ -144,7 +144,7 @@ export default function GymPaymentsPage() {
                         {payment.type === "membership" ? "Membership Payment" : "Salary Payment"}
                       </p>
                       <p className="text-sm text-gray-500">
-                        {new Date(payment.date || payment.paymentDate || payment.createdAt).toLocaleDateString()}
+                        {new Date(payment.date || payment.paymentDate || payment.createdAt || new Date()).toLocaleDateString()}
                       </p>
                       {payment.updatedAt && payment.updatedAt !== payment.createdAt && (
                         <p className="text-xs text-gray-400">Updated: {new Date(payment.updatedAt).toLocaleDateString()}</p>

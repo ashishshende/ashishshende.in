@@ -10,7 +10,7 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            I'm a dedicated MERN Stack Developer with a passion for creating innovative web solutions
+            I&apos;m a dedicated MERN Stack Developer with a passion for creating innovative web solutions
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export function AboutSection() {
 
             <p className="text-gray-300 leading-relaxed">
               My expertise spans modern JavaScript frameworks, Python development, AI/ML integration, database design, API development, and cloud deployment. 
-              I'm passionate about leveraging AI to solve complex problems while maintaining clean, maintainable code and staying updated with the latest industry trends.
+              I&apos;m passionate about leveraging AI to solve complex problems while maintaining clean, maintainable code and staying updated with the latest industry trends.
             </p>
           </div>
 

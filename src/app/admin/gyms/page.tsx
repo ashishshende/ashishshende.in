@@ -30,7 +30,7 @@ export default function AdminGymsPage() {
     fetchGyms();
   }, []);
 
-  const filteredGyms = gyms.filter((gym: any) =>
+  const filteredGyms = gyms.filter((gym: { name: string; email: string; id: string; phone: string; status: string; createdAt: string }) =>
     gym.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     gym.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -39,7 +39,7 @@ export default function AdminGymsPage() {
     if (confirm("Are you sure you want to delete this gym?")) {
       try {
         await api.delete(`/admin/gyms/${gymId}`);
-        setGyms(gyms.filter((gym: any) => gym.id !== gymId));
+        setGyms(gyms.filter((gym: { id: string }) => gym.id !== gymId));
         alert("Gym deleted successfully!");
       } catch (error) {
         console.error("Failed to delete gym:", error);
@@ -96,7 +96,7 @@ export default function AdminGymsPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredGyms.map((gym: any) => (
+                  {filteredGyms.map((gym: { id: string; name: string; email: string; phone: string; status: string; createdAt: string }) => (
                     <tr key={gym.id} className="border-b hover:bg-gray-50">
                       <td className="p-4 font-medium">{gym.name}</td>
                       <td className="p-4">{gym.email}</td>
