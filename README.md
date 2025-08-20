@@ -20,6 +20,37 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Deployment to GoDaddy
+
+This project is configured for automatic deployment to GoDaddy hosting via GitHub Actions.
+
+### Setup Instructions:
+
+1. **Get GoDaddy FTP Details:**
+   - Login to GoDaddy cPanel
+   - Go to Files → FTP Accounts
+   - Note your FTP server, username, and password
+
+2. **Add GitHub Secrets:**
+   - Go to your GitHub repo → Settings → Secrets and variables → Actions
+   - Add these secrets:
+     - `FTP_SERVER`: Your GoDaddy FTP server (e.g., ftp.yourdomain.com)
+     - `FTP_USERNAME`: Your cPanel/FTP username
+     - `FTP_PASSWORD`: Your cPanel/FTP password
+
+3. **Deploy:**
+   - Push to `main` branch
+   - GitHub Actions will automatically build and deploy to GoDaddy
+   - Check Actions tab for deployment status
+
+### Manual Build:
+
+```bash
+npm run build
+```
+
+The static files will be generated in the `out/` directory.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
