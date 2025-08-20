@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download, Code, Database, Server, GitBranch, Settings, Cloud, Zap, Cpu, Brain, Bot } from 'lucide-react';
+import { Download, Code, Database, Server, GitBranch, Settings, Cloud, Zap, Cpu, Brain, Bot } from 'lucide-react';
 
 export function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
