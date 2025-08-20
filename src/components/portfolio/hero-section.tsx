@@ -41,7 +41,7 @@ export function HeroSection() {
         loop
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/hero-background.mp4" type="video/mp4" />
+        <source src="/assets/video/hero-background.mp4" type="video/mp4" />
       </video>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
@@ -150,7 +150,7 @@ export function HeroSection() {
               <div className="absolute inset-4 rounded-full overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="/avatar.jpg" 
+                  src="/assets/img/avatar.jpg" 
                   alt="Ashish Shende" 
                   className="w-full h-full object-cover opacity-50"
                 />
