@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ashishshende.in'),
   title: "Ashish Shende - Full Stack Developer | MERN Stack Expert",
   description: "Experienced Full Stack Developer specializing in MERN stack, React, Node.js, and modern web technologies. Available for freelance projects and collaborations.",
   keywords: "Full Stack Developer, MERN Stack, React, Node.js, JavaScript, TypeScript, Web Development, Freelancer, Ashish Shende",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ashishshende.dev",
+    url: "https://ashishshende.in",
     title: "Ashish Shende - Full Stack Developer | MERN Stack Expert",
     description: "Experienced Full Stack Developer specializing in MERN stack, React, Node.js, and modern web technologies.",
     siteName: "Ashish Shende Portfolio",
@@ -38,10 +39,17 @@ export const metadata: Metadata = {
   themeColor: "#1f2937",
   icons: {
     icon: '/favicon.ico',
-    apple: '/apple-icon',
   },
   manifest: '/manifest.json',
 };
+
+export function generateViewport() {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: '#1f2937',
+  }
+}
 
 export default function RootLayout({
   children,
@@ -51,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://ashishshende.dev" />
+        <link rel="canonical" href="https://ashishshende.in" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -61,7 +69,7 @@ export default function RootLayout({
               name: "Ashish Shende",
               jobTitle: "Full Stack Developer",
               description: "Experienced Full Stack Developer specializing in MERN stack, React, Node.js, and modern web technologies.",
-              url: "https://ashishshende.dev",
+              url: "https://ashishshende.in",
               email: "ashish.shende034@gmail.com",
               image: "/avatar.jpg",
               sameAs: [
