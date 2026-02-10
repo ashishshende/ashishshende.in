@@ -25,12 +25,13 @@ jobs:
       - name: Build static site
         run: npm run build
         
-      - name: Deploy to GoDaddy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Deploy to GoDaddy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_path: './out/*'
-          remote_path: '/'
-          sftp_only: true
+          local-dir: ./out/
+          server-dir: ./public_html/
+          protocol: ftps
+          port: 21
